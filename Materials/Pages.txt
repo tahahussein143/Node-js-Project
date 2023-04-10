@@ -1,0 +1,9 @@
+Templete
+    - https://themewagon.github.io/manup/index.html
+github
+    - https://github.com/themewagon/manup
+
+Home
+    - Blog
+Event
+    - Home (remove uneeded section)
