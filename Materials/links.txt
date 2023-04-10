@@ -1,2 +1,6 @@
 Node Js Playlist
     - https://www.youtube.com/watch?v=LQFuGafKEow&list=PLrvHCesHYw38kFL6w-i6Rv85oS3L0sp-o&index=9 
+    - https://www.youtube.com/playlist?list=PLrqnCw1PxTtHvKmGp3nXx3at08XAcp-qQ  from 41 to 47
+
+- Sequelize ORM Playlist
+    - https://www.youtube.com/playlist?list=PLfDx4cQoUNObHX28K6FS38LkB2CPLGGfx
