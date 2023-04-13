@@ -1,0 +1,64 @@
+* {
+    --color-binc: #f9488b;
+    --color-orange: #ee8425;
+    --color-white: #fff;
+    --colorCoralRed: #f44949;
+    --colorBlowBlack: #171822;
+    --colorWhite: #fff;
+    --color-blue-gray-light: #a0a1b5;
+    --color-blue-gray-darck: #2f3039;
+}
+
+
+.form-speaker {
+    background-image: linear-gradient(to right, var(--color-orange) 0%, var(--color-binc) 100%), linear-gradient(to right, var(--color-orange) 0%,
+            var(--color-binc) 100%);
+
+}
+
+.card-form {
+    background-color: var(--color-white);
+
+}
+.colorText{
+    color: var(--colorCoralRed);
+}
+.input__image {
+    display: none;
+}
+
+
+
+.image-fluid {
+    max-width: 100%;
+    height: 150px;
+}
+
+.form-check-input:checked {
+    background-color: var(--colorCoralRed);
+    border-color: var(--colorCoralRed);
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: var(--colorCoralRed);
+    box-shadow: none;
+}
+
+.form-select:focus {
+    border-color: var(--colorCoralRed);
+    box-shadow: none;
+}
+
+.btnSubmit {
+    background-image: linear-gradient(to right, var(--color-orange) 0%, var(--color-binc) 100%), linear-gradient(to right, var(--color-orange) 0%,
+            var(--color-binc) 100%);
+}
+
+.btnSubmit:hover {
+    background-image: var(--color-orange);
+}
+
+.btnReset {
+    background-color: var(--color-blue-gray-light);
+}

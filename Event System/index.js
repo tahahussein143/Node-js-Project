@@ -47,9 +47,9 @@ app.get('/', (req, res) => {
     res.render('blog');
 })
 
-// app.get('/event', (req, res) => {
-//     res.render('index');
-// })
+app.get('/event', (req, res) => {
+    res.render('index');
+})
 
 app.get('/speakers', (req, res) => {
     res.render('speaker');
@@ -60,19 +60,19 @@ app.get('/CreateEvent', (req, res) => {
 })
 
 
-app.post('/CreateEvent', (req, res) => {
+// app.post('/CreateEvent', (req, res) => {
 
-    let data = {
-        'name': req.body.name,
-        'location': req.body.location,
-        'days': req.body.days,
-        'manths': req.body.manths,
-        'years': req.body.years,
-        'description': req.body.description
+//     let data = {
+//         'name': req.body.name,
+//         'location': req.body.location,
+//         'days': req.body.days,
+//         'manths': req.body.manths,
+//         'years': req.body.years,
+//         'description': req.body.description
 
-    }
-    res.render('index', { data });
-})
+//     }
+//     res.render('index', { data });
+// })
 
 
 
