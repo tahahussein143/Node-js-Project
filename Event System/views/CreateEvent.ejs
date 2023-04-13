@@ -1,0 +1,84 @@
+<div class="container mt-4">
+    <div class="row d-flex justify-content-center">
+        <div class="col-8 mb-5 ">
+            <form action="/" class="form-login">
+                <div class="banner">
+                    <h1> Events Application Form</h1>
+                </div>
+                <h3 class="applicant"> Applicant Details</h3>
+                <div class="item">
+                    <p>Name</p>
+                    <div class="name-item">
+                        <input type="text" name="name" placeholder="First" class="inputs" />
+                        <input type="text" name="name" placeholder="Last" class="inputs" />
+                    </div>
+                </div>
+                <div class="item">
+                    <p>Phone</p>
+                    <input type="text" name="Phone" class="inputs" />
+                </div>
+                <div class="item">
+                    <p>Email</p>
+                    <input type="email" name="Email" class="inputs" />
+                </div>
+                <div class="item">
+                    <p>Address</p>
+                    <input type="text" name="Street" placeholder="Street address" class="inputs" />
+                    <div class="city-item">
+                        <input type="text" name="City" placeholder="City" class="inputs" />
+                        <input type="text" name="Region" placeholder="Region" class="inputs" />
+                        <input type="text" name="Postal" placeholder="Postal / Zip code" class="inputs" />
+                        <select class="select">
+                            <option value="">Country</option>
+                            <option value="1">Egypt</option>
+                            <option value="2">Germany</option>
+                            <option value="3">France</option>
+                            <option value="4">Armenia</option>
+                            <option value="5">USA</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="DetailsH3">Event Details</h3>
+                <div class="item">
+                    <p>Event Title</p>
+                    <input type="text" name="name" class="inputs" />
+                </div>
+                <div class="item">
+                    <p>Location</p>
+                    <input type="text" name="Location" class="inputs" />
+                </div>
+                <div class="item" id="itemData">
+                    <div> <span class="span-date">Start Date </span> <span><select name="numDays" id="numDays">
+                                <option value=""> </option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select></span></div>
+                </div>
+                <div class="item">
+                    <p>Ticket Price</p>
+                    <input type="text" name="Price" class="inputs" />
+                </div>
+                <div class="item">
+                    <p> Description Event </p>
+                    <textarea name="description" id="description" cols="98" rows="5"></textarea>
+                </div>
+                <div class="question">
+                    <p>Privacy Policy<span class="required">*</span></p>
+                    <div class="question-answer checkbox-item">
+                        <div>
+                            <input type="checkbox" value="none" id="check_1" name="check" required class="inputs" />
+                            <label for="check_1" class="check"><span>I agree to the <a
+                                        href="https://www.w3docs.com/privacy-policy">privacy policy.</a></span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-block">
+                    <button type="submit" href="/">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

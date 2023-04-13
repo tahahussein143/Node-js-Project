@@ -1,0 +1,113 @@
+/*---------------------
+  Footer
+-----------------------*/
+* {
+    --colorCoralRed: #f44949;
+    --colorBlowBlack: #171822;
+    --color-blue-gray-light: #a0a1b5;
+    --color-blue-gray-darck: #2f3039;
+}
+
+.footer-section {
+    background: var(--colorBlowBlack);
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.partner-logo {
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--color-blue-gray-darck)
+}
+
+.partner-logo .pl-table {
+    display: inline-block;
+    display: table;
+}
+
+.partner-logo .pl-table .pl-tablecell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 41px;
+}
+
+.footer-text {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.footer-text .ft-logo {
+    margin-bottom: 20px;
+}
+
+.footer-text .ft-logo a {
+    display: inline-block;
+}
+
+.footer-text ul {
+    margin-bottom: 18px;
+}
+
+.footer-text ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 52px;
+}
+
+.footer-text ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-text ul li a {
+    font-size: 18px;
+    color: var(--color-blue-gray-light);
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.footer-text ul li a:hover {
+    color: var(--colorCoralRed)
+}
+
+.footer-text .copyright-text {
+    font-size: 14px;
+    color: var(--color-blue-gray-light);
+    margin-bottom: 28px;
+}
+
+.footer-text .copyright-text i {
+    color: var(--colorCoralRed);
+}
+
+.footer-text .copyright-text a {
+    color: var(--color-blue-gray-light);
+}
+
+.footer-text .copyright-text a:hover {
+    color: var(--colorCoralRed);
+}
+
+.footer-text .ft-social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    color: var(--color-blue-gray-light);
+    border: 1px solid #45464e;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.footer-text .ft-social a:hover {
+    color: var(--colorCoralRed);
+    border: 1px solid  transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 var(--colorCoralRed);  ;
+}
+
+.footer-text .ft-social a:last-child {
+    margin-right: 0;
+}
