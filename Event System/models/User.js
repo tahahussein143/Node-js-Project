@@ -29,9 +29,9 @@ module.exports = ( sequelize, DataTypes ) => {
         },
         role: {
             type: DataTypes.ENUM( 'admin', 'user' ),
-            validate: {
-                isIn: ['admin', 'user']
-            },
+            // validate: {
+            //     isIn: ['admin', 'user']
+            // },
             defaultValue: 'user'
         },
         phone: {
