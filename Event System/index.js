@@ -1,12 +1,13 @@
 //#region liberaries
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
-const fs = require('fs');
-const multer = require('multer');
-const logger = require('morgan');
-const ejs = require('ejs');
-const ejsLayouts = require('express-ejs-layouts');
+const express = require( 'express' );
+const bodyParser = require( 'body-parser' );
+const path = require( 'path' );
+const fs = require( 'fs' );
+const multer = require( 'multer' );
+const logger = require( 'morgan' );
+const ejs = require( 'ejs' );
+const ejsLayouts = require( 'express-ejs-layouts' );
+const db = require( './models' );
 //#endregion 
 
 //#region variables
@@ -15,52 +16,52 @@ const port = 3000;
 //#endregion
 
 //#region app server
-app.listen(port, 'localhost', (req, res) => {
-    console.log(`app is listening at http://localhost:${port}`);
-});
+app.listen( port, 'localhost', ( req, res ) => {
+    console.log( `app is listening at http://localhost:${port}` );
+} );
 //#endregion
 
 //#region View engine setup
-app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'views')); // E:\nodejs project\Event System   +  \views
+app.set( 'view engine', 'ejs' );
+app.set( 'views', path.join( __dirname, 'views' ) ); // E:\nodejs project\Event System   +  \views
 //#endregion
 
 //#region Middleware
-app.use(bodyParser.urlencoded({ extended: true })) // parse application/x-www-form-urlencoded
+app.use( bodyParser.urlencoded( { extended: true } ) ); // parse application/x-www-form-urlencoded
 
-app.use(bodyParser.json()) // parse application/json
+app.use( bodyParser.json() ); // parse application/json
 
-app.use(multer().array()); // parse multipart/form-data
+app.use( multer().array() ); // parse multipart/form-data
 
-app.use(bodyParser.text()); // parse text/html
+app.use( bodyParser.text() ); // parse text/html
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use( express.static( path.join( __dirname, 'public' ) ) );
 
-app.use(logger('common'));
-app.use(ejsLayouts);
+app.use( logger( 'tiny' ) );
+app.use( ejsLayouts );
 // app.disable( 'etag' );
 
 //#endregion
 
 //#region routs
-app.get('/', (req, res) => {
-    res.render('blog');
-})
+app.get( '/', ( req, res ) => {
+    res.render( 'blog' );
+} );
 
 // app.get('/event', (req, res) => {
 //     res.render('index');
 // })
 
-app.get('/speakers', (req, res) => {
-    res.render('speaker');
-})
+app.get( '/speakers', ( req, res ) => {
+    res.render( 'speaker' );
+} );
 
-app.get('/CreateEvent', (req, res) => {
-    res.render('CreateEvent')
-})
+app.get( '/CreateEvent', ( req, res ) => {
+    res.render( 'CreateEvent' );
+} );
 
 
-app.post('/CreateEvent', (req, res) => {
+app.post( '/CreateEvent', ( req, res ) => {
 
     let data = {
         'name': req.body.name,
@@ -69,11 +70,18 @@ app.post('/CreateEvent', (req, res) => {
         'manths': req.body.manths,
         'years': req.body.years,
         'description': req.body.description
+    };
+    res.render( 'index', { data } );
+} );
 
-    }
-    res.render('index', { data });
-})
+app.route( '/hall' ).get( ( req, res ) => {
 
+    db.halls.findAll( { raw: true } ).then( data => {
+        console.log(data);
+        res.render( 'hall-index', { data } );
+
+    } );
+} );
 
 
 //#endregion
