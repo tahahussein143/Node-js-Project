@@ -12,6 +12,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-height: 100px;
 }
 
 .header-section.header-normal {
@@ -20,8 +21,8 @@
 
 .logo {
     float: left;
-    padding-top: 36px;
-    padding-bottom: 37px;
+    padding-top: 25px;
+    /* padding-bottom: 37px; */
 }
 
 .logo a {
@@ -29,7 +30,7 @@
 }
 
 .logo a img {
-    width: 250px;
+    width: 56px;
 }
 
 .nav-menu {
